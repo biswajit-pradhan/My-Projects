@@ -1,0 +1,31 @@
+eureka:
+  instance:
+    hostname: localhost
+logging:
+  file:
+    name: appLog.log
+  level:
+    com:
+      userservice: TRACE
+  pattern:
+    console: '%d [%level] %c{1.} [%t] %m%n'
+    file: '%d [%level] %c{1.} [%t] %m%n'
+server:
+  port: '9005'
+spring:
+  application:
+    name: user-service
+  datasource:
+    password: admin
+    url: jdbc:postgresql://localhost:5432/culturofestodb?createDatabaseIfNotExist=true
+    username: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB

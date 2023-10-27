@@ -1,0 +1,62 @@
+eureka:
+  instance:
+    hostname: localhost
+server:
+  port: 9000
+spring:
+  profiles:
+    active:
+    - ${ACTIVE_SPRING_PROFILE:dev}
+  application:
+    name: api-gateway
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+  springdoc:
+    enable-native-support: true
+    api-docs:
+      enabled: true
+    swagger-ui:
+      enabled: true
+      path: /swagger-ui.html
+      config-url: /v3/api-docs/swagger-config
+      urls:
+      - url: /v3/api-docs
+        name: API Gateway Service
+        primaryName: API Gateway Service
+      - url: /product-service/v3/api-docs
+        name: Product Service
+        primaryName: Product Service
+      - url: /price-service/v3/api-docs
+        name: Price Service
+        primaryName: Price Service
+  cloud:
+    gateway:
+      routes:
+      - id: active-booking-module
+        uri: lb://active-booking-module
+        predicates:
+        - Path=/api/activebooking/**
+      - id: admin-module
+        uri: lb://admin-module
+        predicates:
+        - Path=/api/admin/**
+      - id: booking-module
+        uri: lb://booking-module
+        predicates:
+        - Path=/api/booking/**
+      - id: customer-module
+        uri: lb://customer-module
+        predicates:
+        - Path=/api/customer/**
+      - id: payment-module
+        uri: lb://payment-module
+        predicates:
+        - Path=/api/payment/**
+      - id: vehicle-module
+        uri: lb://vehicle-module
+        predicates:
+        - Path=/api/vehicle/**,/api/driver/**
+      
+        

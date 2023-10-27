@@ -1,0 +1,4 @@
+2023-06-13 15:35:23,213 [INFO] com.userservice.CfUserServiceApplication [restartedMain] Starting CfUserServiceApplication using Java 17.0.7 on inlen8520086507 with PID 9588 (C:\Users\BISWPRAD\OneDrive - Capgemini\Desktop\CulturoFesto Project\backend workspace\cf-user-service\target\classes started by biswprad in C:\Users\BISWPRAD\OneDrive - Capgemini\Desktop\CulturoFesto Project\backend workspace\cf-user-service)
+2023-06-13 15:35:23,214 [DEBUG] com.userservice.CfUserServiceApplication [restartedMain] Running with Spring Boot v2.7.12, Spring v5.3.27
+2023-06-13 15:35:23,214 [INFO] com.userservice.CfUserServiceApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-06-13 15:35:24,602 [INFO] com.userservice.CfUserServiceApplication [restartedMain] Started CfUserServiceApplication in 1.49 seconds (JVM running for 39.567)

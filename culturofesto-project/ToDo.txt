@@ -1,0 +1,10 @@
+Layered architecture 
+Exception Handling 
+Loggers 
+JWT Security 
+Microservices + Api GateWay
+JUnit testCases 
+code coverage
+PMD
+angular/React Material or Bootstrap and CSS for designing
+Form Validations

@@ -1,0 +1,35 @@
+eureka:
+   instance:
+      hostname: localhost
+server:
+   port: '9000'
+spring:
+   application:
+      name: api-gateway
+   cloud:
+      gateway:
+         routes:
+         -  id: admin-module
+            uri: lb://admin-module
+            predicates:
+            - Path=/api/admin/**
+         -  id: chatting-module
+            uri: lb://chatting-module
+            predicates:
+            - Path=/api/chatting/**
+         -  id: event-module
+            uri: lb://event-module
+            predicates:
+            - Path=/api/event/**
+         -  id: placement-module
+            uri: lb://placement-module
+            predicates:
+            - Path=/api/placement/**
+         -  id: posting-module
+            uri: lb://posting-module
+            predicates:
+            - Path=/api/posting/**
+         -  id: user-module
+            uri: lb://user-module
+            predicates:
+            - Path=/api/user/**

@@ -1,0 +1,12 @@
+Ports List
+==========
+
+Eurekaserver =8761
+Apigateway=9000
+admin-service=9001
+booking-service=9002
+home-service=9003
+event-service=9004
+user-service=9005
+feedback-service=9006
+
